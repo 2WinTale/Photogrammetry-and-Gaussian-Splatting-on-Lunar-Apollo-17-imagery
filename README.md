@@ -53,6 +53,7 @@ This stage involved reconstructing a 3D model from the initial 10 images using A
 ```bash
 # Export Path: /home/user/Photogrammetry_Models/15_views_model.obj
 ```
+![image](https://github.com/user-attachments/assets/4702745d-30c5-4e77-a969-fee9336cd43d)
 
 ##  Task B: Neural View Augmentation and Reconstruction
 
