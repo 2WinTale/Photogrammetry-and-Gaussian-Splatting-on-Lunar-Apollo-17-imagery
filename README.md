@@ -120,6 +120,7 @@ ssim = structural_similarity(original_img, rendered_img, channel_axis=2)
 * Neural views reduced occlusion issues by adding unseen geometry.
 * SSIM values were modest, showing that while structure was retained, finer details need refinement.
 * The 25-view model was visually smoother and geometrically broader.
+![image](https://github.com/user-attachments/assets/4069be9f-3dbb-4ba9-839d-2ab38032d684)
 
 #  7. Reflections and Challenges
 
