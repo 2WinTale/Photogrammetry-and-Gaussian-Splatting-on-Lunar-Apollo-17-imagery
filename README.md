@@ -1,10 +1,10 @@
-# 📘 Exploring Hybrid 3D Reconstruction: A Comparative Study of Photogrammetry and Gaussian Splatting
+#  Exploring Hybrid 3D Reconstruction: A Comparative Study of Photogrammetry and Gaussian Splatting
 
-# 🔹 1. Introduction
+# 1. Introduction
 
 Modern 3D reconstruction demands both geometric precision and photorealistic rendering. This project explores a hybrid workflow that combines conventional photogrammetry with advanced neural rendering via Gaussian Splatting. We aim to analyze how each method contributes to the reconstruction pipeline and how they complement each other when integrated.
 
-# 🔹 2. Project Overview
+# 2. Project Overview
 
 * **Objective:** Assess the effectiveness of augmenting traditional photogrammetry with neural-generated views.
 * **Dataset:** 10 original PNG images capturing a simulated lunar module from varied angles.
@@ -13,7 +13,7 @@ Modern 3D reconstruction demands both geometric precision and photorealistic ren
   * Task A: 3D model generation from original images using Agisoft Metashape.
   * Task B: Neural rendering with Gaussian Splatting and dataset augmentation, followed by mesh regeneration.
 
-# 🔹 3. Tools and Setup
+#  3. Tools and Setup
 
 | Component           | Specification                          |
 | ------------------- | -------------------------------------- |
@@ -23,9 +23,9 @@ Modern 3D reconstruction demands both geometric precision and photorealistic ren
 | Libraries           | Python 3.10, PyTorch, OpenCV, LPIPS    |
 | Hardware            | NVIDIA RTX 4060 GPU, CUDA Toolkit 12.1 |
 
-# 🔹 4. Assignment Breakdown
+#  4. Assignment Breakdown
 
-## 🔸 Task A: Photogrammetric Reconstruction
+##  Task A: Photogrammetric Reconstruction
 
 This stage involved reconstructing a 3D model from the initial 10 images using Agisoft Metashape.
 
@@ -54,7 +54,7 @@ This stage involved reconstructing a 3D model from the initial 10 images using A
 # Export Path: /home/user/Photogrammetry_Models/15_views_model.obj
 ```
 
-## 🔸 Task B: Neural View Augmentation and Reconstruction
+##  Task B: Neural View Augmentation and Reconstruction
 
 This stage tested whether adding neural-generated views could enhance the model's completeness and fidelity.
 
@@ -80,9 +80,9 @@ cp ~/GS_Rendered/*.png ~/Photogrammetry_25Views/
 
 **Step 4:** Reconstructed the model again using the expanded dataset, applying the same parameters as Task A.
 
-# 🔹 5. Performance Evaluation
+#  5. Performance Evaluation
 
-## 🔸 5.1 Image Similarity (PSNR & SSIM)
+## 5.1 Image Similarity (PSNR & SSIM)
 
 Two metrics were used to compare original images with corresponding rendered outputs. These were computed using the following Python snippet:
 
@@ -105,7 +105,7 @@ ssim = structural_similarity(original_img, rendered_img, channel_axis=2)
 | A17\_09.png | pic8.png  | 8.26 | 0.1574 |
 | A17\_10.png | pic9.png  | 8.38 | 0.1520 |
 
-## 🔸 5.2 Mesh Statistics Comparison
+##  5.2 Mesh Statistics Comparison
 
 | Metric          | 15-Image Model | 25-Image Model |
 | --------------- | -------------- | -------------- |
@@ -115,13 +115,13 @@ ssim = structural_similarity(original_img, rendered_img, channel_axis=2)
 
 **Insight:** The augmented model captured a larger volume and had higher face density, pointing to improved coverage and structural detail.
 
-# 🔹 6. Observations
+#  6. Observations
 
 * Neural views reduced occlusion issues by adding unseen geometry.
 * SSIM values were modest, showing that while structure was retained, finer details need refinement.
 * The 25-view model was visually smoother and geometrically broader.
 
-# 🔹 7. Reflections and Challenges
+#  7. Reflections and Challenges
 
 **Achievements:**
 
@@ -133,7 +133,7 @@ ssim = structural_similarity(original_img, rendered_img, channel_axis=2)
 * Neural outputs lacked crispness compared to real photos.
 * Rendering consistency across novel views was hard to achieve.
 
-# 🔹 8. Conclusion & Recommendations
+#  8. Conclusion & Recommendations
 
 This study affirms that combining Gaussian Splatting with photogrammetry enhances the quality and completeness of 3D reconstructions. Although further refinement in synthetic view generation is needed, the added perspective diversity clearly benefited the final mesh.
 
@@ -144,6 +144,3 @@ This study affirms that combining Gaussian Splatting with photogrammetry enhance
 * Test with outdoor or real-time datasets.
 
 
-
-📄 *Submitted by: Mudit Khandelwal and Team*
-📅 *Date: May 10, 2025*
