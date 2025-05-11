@@ -109,8 +109,8 @@ ssim = structural_similarity(original_img, rendered_img, channel_axis=2)
 
 | Metric          | 15-Image Model | 25-Image Model |
 | --------------- | -------------- | -------------- |
-| Vertices        | 264,859        | 258,098        |
-| Faces           | 480,491        | 517,422        |
+| Vertices        | 9,408,59        | 258,098        |
+| Faces           | 18,804,91        | 517,422        |
 | Bounding Volume | 66.59          | 135.98         |
 
 **Insight:** The augmented model captured a larger volume and had higher face density, pointing to improved coverage and structural detail.
