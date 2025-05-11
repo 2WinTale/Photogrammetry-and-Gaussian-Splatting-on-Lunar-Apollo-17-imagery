@@ -145,3 +145,7 @@ This study affirms that combining Gaussian Splatting with photogrammetry enhance
 * Test with outdoor or real-time datasets.
 
 
+For Further reference :
+
+Google Drive Link : https://drive.google.com/drive/folders/1O4EkNWAZxBKtdB-KF_LUXxyEoJ8riMsx?usp=sharing
+
